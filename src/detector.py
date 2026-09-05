@@ -3,11 +3,7 @@
 from pathlib import Path
 
 from ultralytics import YOLO
-
-try:
-    from src.get_path import get_test_image_path
-except ModuleNotFoundError:  # pragma: no cover - fallback for script execution
-    from get_path import get_test_image_path
+from loader import get_test_image_path
 
 def test():
     """Run object detection on the sample image and return detected objects."""

@@ -1,42 +1,97 @@
-# Python bytecode and virtual environments
+# ==========================================
+# Python Bytecode & Environments
+# ==========================================
 __pycache__/
 *.py[cod]
+*$py.class
 *.pyo
 *.pyd
+
+# Virtual environments
 .venv/
 venv/
 ENV/
 env/
+myenv/
+.vehicle_analyze/
 
-# Python packaging / tooling
+# ==========================================
+# Testing, Coverage & Linters
+# ==========================================
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
 .coverage
 .coverage.*
 htmlcov/
+nosetests.xml
+coverage.xml
 
-# Jupyter / notebooks
+# ==========================================
+# Jupyter & Notebooks
+# ==========================================
 .ipynb_checkpoints/
 
-# IDE / editor settings
-.vscode/
+# ==========================================
+# IDE & Editors
+# ==========================================
 .idea/
 *.swp
 *.swo
+*~
+# Ignore VS Code user workspace files except launch configuration if desired
+.vscode/
 
-# OS files
+# ==========================================
+# Operating System Artifacts
+# ==========================================
 .DS_Store
 Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
 
-# Local project data and generated outputs
-results/
-models/
+# ==========================================
+# Machine Learning Models & Weights
+# ==========================================
 *.pt
+*.pth
+*.keras
+*.h5
+*.hdf5
 *.onnx
 *.weights
-*.log
+*.tflite
+*.safetensors
+*.bin
 
-# Dataset cache or temporary files
+# Keep structure files in models/
+models/*
+!models/.gitkeep
+!models/README.md
+
+# ==========================================
+# Results & Generated Predictions
+# ==========================================
+results/*
+!results/.gitkeep
+!results/README.md
+!results/graphs/
+results/graphs/*
+!results/graphs/.gitkeep
+!results/predictions/
+results/predictions/*
+!results/predictions/.gitkeep
+
+# Logs and temporary files
+*.log
 *.tmp
 *.temp
+
+# ==========================================
+# Dataset Images & Cache
+# ==========================================
+dataset/Car_colors/**/*.jpg
+dataset/Car_colors/**/*.jpeg
+dataset/Car_colors/**/*.png
+!dataset/Car_colors/**/.gitkeep
+

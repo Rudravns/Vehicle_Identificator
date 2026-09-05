@@ -5,3 +5,5 @@ pandas
 Pillow
 matplotlib
 streamlit
+tensorflow
+pytest
